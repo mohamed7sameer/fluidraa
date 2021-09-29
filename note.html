@@ -1,0 +1,28 @@
+<html>
+
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">PORTFOLIO</a>
+    </div>
+
+
+
+<div id="mySidenav" class="sidenav"></div>
+<script>
+let astHfMenu1 = document.querySelectorAll('#ast-hf-menu-1 a')
+let data = `<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>`
+let mySidenav = document.querySelector('#mySidenav')
+if(astHfMenu1 && mySidenav){
+    for(let i = 0; i<astHfMenu1.length; i++){
+        let elem = astHfMenu1[i];
+        data += `<a href="${elem.href}">${elem.innerHTML}</a>`;
+    }
+    mySidenav.innerHTML = data
+}
+</script>
+
+
+</html>

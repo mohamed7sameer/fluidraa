@@ -1,0 +1,109 @@
+extends includes/layout.pug
+
+block content
+    header(class="sec-header")
+        .container
+            .co-info
+                h1(class="co-title")
+                    | Lorem ipsum dolor sit amet 
+                p(class="co-para")
+                    | Proin bibendum placerat liberat aporttitor. Donec vestibulum at augue venenatis aliquam Donec dolor elit, lacinia nec purus eget, fringilla fringilla massa 
+                p(class="co-para")
+                    | Phasellus congue metus vel lorem faucibus, eget vulputate elit iaculis.
+            .co-main-box-icon
+                -
+                    let x = [
+                        ['Object2.png','Chat','bounceInLeft'],
+                        ['Vector Smart Object3.png','Call','bounceInUp'],
+                        ['Vector Smart Object5.png','Email','bounceInDown'],
+                        ['Vector Smart Object6.png','Adress','bounceInRight']
+                    ]
+                each val in x
+                    a.co-box-icon(href="#" class="wow "+hvr2+" "+val[2])
+                        img(class="co-img" src="assets/imgs/"+val[0], alt="") 
+                        span(class="co-link")=val[1]
+    section(class="sec-2")
+        .container
+            .row.flex-column-reverse.flex-md-row
+                .col-md-7
+                    .co-left
+                        h2(class="co-title wow bounceInUp")
+                            | Lorem ipsum dolor sit amet,
+                            br
+                            | consectetur adipiscing elit.
+                        p(class="para-1 wow bounceInUp")
+                            | Proin bibendum placerat libero a porttitor. Donec vestibulum at augue venenatis aliquam. Donec dolor elit, lacinia nec purus eget, fringilla fringilla massa. Donec dapibus pulvinar posuere. Maecenas iaculis auctor ligula, at ornare purus lobortis eu.
+                        p(class="para-1 wow bounceInUp")
+                            |Nullam quis dui ut ante sodales volutpat. Pellentesque pulvinar hendrerit libero, sit amet tristique metus vestibulum sit amet. Sed quam enim, aliquam malesuada eleifend quis, cursus eget ante. In tempor nibh purus, at hendrerit nibh faucibus vel. Sed sollicitudin lacus tellus, a dictum tellus cursus non.
+                        a(href="#" class="btn-more wow bounceInUp "+hvr2) SEE MORE
+                .col-md-5
+                    .co-right
+                        img(src="assets/imgs/Vector Smart Object 2.png", class="w-100 wow bounceInDown")
+
+    section(class="sec-3")
+        .container
+            .co-row-1(class="wow bounceInLeft")
+                h2 
+                    | Lorem ipsum dolor sit amet
+                p
+                    | Proin bibendum placerat libero a porttitor. Donec vestibulum at augue venenatis aliquam. Donec dolor elit, lacinia nec purus eget, fringilla fringilla massa. Donec dapibus pulvinar posuere. Ut at est nulla.
+            
+            .co-row-2(class="wow bounceInRight")
+                ul.nav.nav-tabs(role="tablist")
+                    each val,i in dataTab
+                        - let active = (i==0)?'active':''
+                        li.nav-item(role="presentation")
+                            button.nav-link(id="co-tab"+i, class=active  data-bs-toggle="tab", data-bs-target="#co-panel"+i)!=val[0]
+                                //- img(class="co-img" src="assets/imgs/"+val[0], alt="#")
+
+                .tab-content
+                    each val,i in dataTab
+                        - let active = (i==0)?'show active':''
+                        .tab-pane.fade(id="co-panel"+i , role="tabpanel", class=active) 
+                            h3=val[1]
+                            p=val[2]  
+                    
+    section(class="sec-blog")
+        .container
+            .row
+                .col-lg-7
+                    .co-left(class="wow bounceInUp")
+                        img.w-100( class="co-img" src="assets/imgs/bg1.png", alt="")
+                        .co-text
+                            h3(class="co-title")
+                                | Integer porttitor, metus eu auctor consectetur
+                            a(href="#" class="btn-read-more "+hvr3) Read More 
+                .col-lg-5
+                    .co-right(class="wow bounceInDown")
+                        -
+                            let dataBlog = [
+                                ['blog 1 copy 2.png','08/05/2017','nteger porttitor, metus eu auctor consectetur'],
+                                ['blog 1 copy 2.png','08/05/2017','nteger porttitor, metus eu auctor consectetur'],
+                                ['blog 1 copy 2.png','08/05/2017','nteger porttitor, metus eu auctor consectetur']
+                            ]
+                        each val in dataBlog
+                            a(class="coo "+hvr3 href="#")
+                                img(class="co-img" src="assets/imgs/"+val[0], alt="")
+                                .co-text
+                                    p(class="co-data")=val[1]
+                                    h3(class="co-title")=val[2]
+
+
+    section(class="sec-download")
+        .container
+            .row
+                .col-sm-5
+                    .down-img(class="wow slideInUp")
+                        img(class="co-img" src="assets/imgs/Layer 2.png", alt="")
+                .col-sm-7
+                    .down-img-p(class="wow bounceInRight")
+                        h2(class="co-title")
+                            | Download now
+                        p(class="co-para")
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet semper finibus. Proin cursus porta ipsum, id euismod eros consequat vitae. Donec rutrum risus augue, consequat eleifend ipsum faucibus id.
+                        .co-btns
+                            a.me-4(href="#" class=hvr2)
+                                img(src="assets/imgs/Layer 3.png", alt="")
+                            a(href="#" class=hvr2)
+                                img(src="assets/imgs/Android-App-Store-logos.png", alt="")
+        

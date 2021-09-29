@@ -1,0 +1,29 @@
+nav.navbar.navbar-expand-lg(class="main-top-navbar")
+  .container
+    a.navbar-brand(href="#")
+        img(src="assets/imgs/Vector Smart Object.png", alt="")
+    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#main-top-navbar-collapse", aria-controls="main-top-navbar-collapse", aria-expanded="false", aria-label="Toggle navigation")
+        <i class="fas fa-bars"></i>
+    .collapse.navbar-collapse#main-top-navbar-collapse
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item(class=hvr1)
+            a.nav-link(href="#") ABOUT
+        li.nav-item(class=hvr1)
+            a.nav-link(href="#") SERVICES
+        li.nav-item(class=hvr1)
+            a.nav-link(href="#") PORTFOLIO
+    #main-top-navbar-collapse2
+        ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+            li.nav-item.mo-nav-item-search
+                .input-group.mb-3
+                    input.form-control(type="text", placeholder="Search", aria-label="Search", aria-describedby="Search")
+                    button.btn.btn-secondary#button-addon2(type="button")
+                        i.fas.fa-search
+                a.nav-link(data-bs-toggle="modal", data-bs-target="#exampleModalCenter")
+                    i.fas.fa-search
+            li.nav-item.mo-nav-item-bars
+                a.nav-link(href="javascript:void(0)" onclick="openNav()")
+                    i.fas.fa-bars
+
+
+
