@@ -28,4 +28,20 @@ if(astHfMenu1 && mySidenav){
 
 
 
+
+
 new WOW().init();
+
+
+
+
+// $(document).click(function (e)
+// {
+//     var container = $(".searchit");
+
+//     if (!container.is(e.target))
+//     {
+//         $('.searchbox').hide();
+//         container.removeClass('search');
+//     }
+// });
